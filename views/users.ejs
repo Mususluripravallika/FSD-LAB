@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+
+    <h1>User List</h1>
+    <hr>
+
+    <% if (users.length === 0) { %>
+        <h3>No users found.</h3>
+    <% } else { %>
+
+        <ol>
+            <% users.forEach(user => { %>
+                <li>
+                    <%= user.name %> -
+                    <%= user.email %> -
+                    <%= user.age %> years
+                </li>
+            <% }); %>
+        </ol>
+
+        <h3>Total users: <%= users.length %></h3>
+
+    <% } %>
+
+</body>
+</html>
